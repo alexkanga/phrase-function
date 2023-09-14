@@ -44,5 +44,26 @@ function countWords2(phrase,word) {
    
 }
 
+function encadrer(chaine) {
+    const voyelle = "aeiouy";
+    const consonne = "bcdfghjklmnpqrstvwxz";
+
+    let tableau = [];
+    for (let i = 1; i < chaine.length-1; i++) {
+        let isConsonne = consonne.includes(chaine[i].toLowerCase());
+        let isPrevIsVoyelle = voyelle.includes(chaine[i-1].toLowerCase());
+        let isNextIsVoyelle = voyelle.includes(chaine[i+1].toLowerCase());
+
+
+        if(isConsonne && isPrevIsVoyelle && isNextIsVoyelle) {
+            tableau.push(chaine[i-1]+chaine[i]+chaine[i+1]);
+        }
+    }
+    return tableau
+}
+
+
+console.log(encadrer("salut famille"));
+
 console.log(countWords("je suis alle au marche", 4));
 console.log(countWords2("le hosting en javascript est le fait de remonter les variables à la compilation","le"));
