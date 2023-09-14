@@ -92,7 +92,12 @@ function sommeNombreChaine(chaine) {
    
 }
 
-//non terminé
+/*Écrire une fonction qui prend paramètre un nombre, la fonction doit retourner une chaîne de caractère dont la taille correspond au nombre
+La chaîne doit suivre cet ordre :1 consonne,2 voyelles
+NB: les consonnes ne doivent pas se répéter
+Ex: genSentence(2) => "vi"
+Ex: genSentence(5) => "caeki"
+Ex: genSentence(12) => "saafuixoibey" */
 function genSentence(tailleChaine){
     const voyelles = "aeiouy";
     const consonnes = "bcdfghjklmnpqrstvwxz";
